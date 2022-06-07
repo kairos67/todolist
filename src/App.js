@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import TodoBoard from "./components/TodoBoard";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -15,6 +16,8 @@ function App() {
         onChange={(event) => setInputValue(event.target.value)}
       />
       <button onClick={addItem}>추가</button>
+
+      <TodoBoard todoList={todoList}/>
     </main>
   );
 }
